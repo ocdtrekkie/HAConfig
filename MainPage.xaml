@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HAConfig.MainPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="Auto,*" Padding="20" HorizontalOptions="Fill" VerticalOptions="Center">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,45,10,10"
+                Text="XRF Agent Config Tool"
+                FontSize="24"
+                HorizontalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0" Text="HAService Database: " HorizontalOptions="End" Margin="10" />
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="Database_FileURI" HorizontalOptions="Fill" Margin="5"
+                   Text="C:\HAC\HACdb.sqlite" Completed="Database_FileURI_Completed" />
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,45,10,10"
+                Text="Sync"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Sync Server URL: " HorizontalOptions="End" Margin="10" />
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="Sync_ServerURL" HorizontalOptions="Fill" Margin="5" />
+            <Label Grid.Row="4" Grid.Column="0" Text="Sandstorm Access Token: " HorizontalOptions="End" Margin="10" />
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="Sync_SandstormToken" HorizontalOptions="Fill" Margin="5" />
+            <Label Grid.Row="5" Grid.Column="0" Text="Sync Server Access Key: " HorizontalOptions="End" Margin="10" />
+            <Entry Grid.Row="5" Grid.Column="1" x:Name="Sync_AccessKey" HorizontalOptions="Fill" Margin="5" />
+            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="25" x:Name="SaveBtn" HorizontalOptions="Center"
+                Text="Save" Clicked="SaveBtn_Clicked" />
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
